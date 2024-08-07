@@ -82,7 +82,7 @@ export default function GENAI() {
             ))}
           </section>
         </div>
-        <div className="mt-5 shadow p-4 rounded d-md-flex">
+        <div className="AIsolutionImg shadow p-4 rounded d-md-flex">
           <div className="col-md-5">
             <img src={featureImage5} alt="whychooseus" width="90%"></img>
           </div>
