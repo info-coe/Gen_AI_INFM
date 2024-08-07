@@ -4,7 +4,7 @@ const Footer = () => {
   
     return (
         <>
-        <div className='flex-container mt-5'>
+        <div className='flex-container'>
             <div className='nasscom flexgrowdiv'>
                 <img src="https://infomericainc.com/Content/images/logo-footer.png" alt="logo" style={{objectFit:"contain"}}></img>
                 <p>Infomerica is a Software Development and Systems Integration company, one of the fastest growing companies that is committed to help our customers grow and move forward in every aspect of their business.</p>

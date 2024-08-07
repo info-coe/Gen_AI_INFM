@@ -1,4 +1,10 @@
 import React from "react";
+import featureImage1 from "./Images/featuresImage1.jpg";
+import featureImage2 from "./Images/featuresImage2.jpg";
+import featureImage3 from "./Images/featuresImage3.jpg";
+import featureImage4 from "./Images/featuresImage4.jpg";
+import featureImage5 from "./Images/featuresImage5.png";
+import Contactus from "./Contactus";
 
 export default function GENAI() {
   const featuresData = [
@@ -36,19 +42,9 @@ export default function GENAI() {
         "We offer tailored solutions for developing, configuring, and training large language models. Our services include robust data validation, security audits, and model testing to ensure your AI systems are reliable and secure.",
     },
     {
-      heading: "Chatbot - AI Assistant Development",
-      content:
-        "Transform your customer service with our advanced AI chatbots. Our development services include designing, deploying, and maintaining chatbots that offer personalized interactions and improved user engagement.",
-    },
-    {
       heading: "Knowledge Base Creation",
       content:
         "Our AI solutions convert unstructured data into useful embeddings, enhancing the knowledge base of your AI models. This service ensures your AI systems are well-informed, efficient, and capable of making better decisions.",
-    },
-    {
-      heading: "Prompt Engineering",
-      content:
-        "Optimize the performance of your generative AI models with our prompt engineering services. We design and fine-tune prompts to improve model accuracy, ensuring high-quality responses every time.",
     },
   ];
 
@@ -74,39 +70,52 @@ export default function GENAI() {
           in an ever-evolving technological landscape.
         </p>
         <div className="mt-4">
-          <h3>Features</h3>
-          <div className="d-md-flex">
-          {featuresData.map((item, index) => (
-            <div key={index} className="border p-3 m-2">
-              <h5>{item.heading}</h5>
-              <p>{item.content}</p>
+          <h3>Our Services</h3>
+          <section className="ServicesContainer">
+            {servicesData.map((item, index) => (
+                <div className="card" key={index}>
+                  <div className="content">
+                    <h3>{item.heading}</h3>
+                    <p>{item.content}</p>
+                  </div>
+                </div>
+            ))}
+          </section>
+        </div>
+        <div className="mt-5 shadow p-4 rounded d-md-flex">
+          <div className="col-md-5">
+            <img src={featureImage5} alt="whychooseus" width="90%"></img>
+          </div>
+          <div className="col-md-7 d-md-flex justify-content-center align-items-center">
+            <div>
+            <h2>Why Choose Infomerica as Your AI Solution Partner?</h2>
+            <p>
+              Infomerica is your ideal AI solution partner, offering expert
+              professionals with deep expertise in machine learning, natural
+              language processing, and computer vision. We prioritize security,
+              follow industry-leading practices, and have a proven track record
+              of successful AI implementations across various domains. Our
+              end-to-end development services ensure a seamless experience from
+              consultation to integration, and we adhere to ethical AI
+              principles to respect user privacy, promote fairness, and prevent
+              biases.
+            </p>
             </div>
-          ))}
           </div>
         </div>
         <div className="mt-4">
-          <h3>Services</h3>
-          {servicesData.map((item, index) => (
-            <div key={index} className="border p-3 m-2">
-              <h5>{item.heading}</h5>
-              <p>{item.content}</p>
-            </div>
-          ))}
-        </div>
-        <div>
-          <h2>Why Choose Infomerica as Your AI Solution Partner?</h2>
-          <p>
-            Infomerica is your ideal AI solution partner, offering expert
-            professionals with deep expertise in machine learning, natural
-            language processing, and computer vision. We prioritize security,
-            follow industry-leading practices, and have a proven track record of
-            successful AI implementations across various domains. Our end-to-end
-            development services ensure a seamless experience from consultation
-            to integration, and we adhere to ethical AI principles to respect
-            user privacy, promote fairness, and prevent biases.
-          </p>
+          <h3>Features</h3>
+          <div className="d-md-flex">
+            {featuresData.map((item, index) => (
+              <div key={index} className="border p-3 m-2">
+                <h5>{item.heading}</h5>
+                <p>{item.content}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+      <Contactus/>
     </div>
   );
 }

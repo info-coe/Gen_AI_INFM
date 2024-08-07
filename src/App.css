@@ -3,84 +3,28 @@
   padding: 0;
 }
 
-.customCard .card{
-  transition: transform 0.8s;
-  transform: scale(0.9);
-  border: none !important;
+.ServicesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.customCard .card:hover {
-  transform: scale(1.0);
-  border: none !important;
-}
-
-.flip-card {
-  min-height: 350px;
-  height: 100%;
-  width: 100%;
-  max-width: 300px; 
-  margin: 10px auto;
-}
-
-.flip-card-inner {
+.ServicesContainer .card {
   position: relative;
-  width: 100%;
-  height: 100%;
-  /* text-align: center; */
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-}
-
-.flip-card:focus {
-    outline: 0;
-}
-
-.flip-card:hover .flip-card-inner,
-.flip-card:focus .flip-card-inner{
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  box-shadow: gray 7px 7px 15px;
-}
-
-.flip-card-front {
-  /* background-color: rgb(14, 46, 78); */
-  background-color: white;
-  /*background-image: url("./Images/capability1.webp"); */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: black;
-  z-index: 2;
+  width: 21rem;
+  height: 21rem;
+  background: rgb(255, 255, 255);
+  margin: 0.7rem;
+  box-shadow: 0 0.7rem 1.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  padding: 10px;
+}
+.content h3, .content p {
   text-align: center;
-}
-
-.flip-card-back {
-  transform: rotateY(180deg);
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.flip-card-front h3 {
-  font-size: 20px;
-  font-family: Verdana, sans-serif;
-  font-weight: bold;
-  margin:0px 40px;
-  /* color: rgb(252, 251, 251); */
-}
-.portfoliohead{
-  min-height: 80px;
 }
 
 .ourcapabilities-grid , .ourserviceportfolio-grid{
@@ -99,7 +43,6 @@
   color: #FE0000;
   cursor: pointer;
   text-align: center;
-  
 }
 #offcanvasRight{
   width: 290px;
@@ -128,7 +71,6 @@
   color:red;
   transition: 0.4s;
 }
-
 
 .text-red {
   color: red !important;
@@ -171,37 +113,6 @@
   width: 100%;
   transition: width .9s;
 }
-
-/* .btn-with-hover {
-position: relative;
-display: inline-flex;
-align-items: center;
-gap: 10px; 
-padding: 8px;
-color: #fff;
-border: 2px solid #fff;
-background-color: blue; 
-overflow: hidden; 
-transition: color 0.3s ease; 
-z-index: 1;
-border-radius: 8px;
-}
-
-.btn-with-hover::before {
-content: '';
-position: absolute;
-top: 0;
-left: -100%; 
-width: 100%;
-height: 100%;
-background-color: red; 
-transition: left 0.4s ease; 
-z-index: -1; 
-}
-
-.btn-with-hover:hover::before {
-left: 0; 
-} */
 
 @keyframes ripple {
 0% {
@@ -311,9 +222,6 @@ left: 0;
   color: rgb(213, 150, 24);
 }
 
-/* footer end */
-
-/* footer end */
 .no-select {
   user-select: none; /* For modern browsers */
   -webkit-user-select: none; /* For Safari */
@@ -402,20 +310,13 @@ left: 0;
   .contactdiv{
     height: 530px;
   }
- 
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .ourcapabilities-grid, .ourserviceportfolio-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-  .flip-card {
-    min-height: 380px;
-  }
-  .portfoliohead{
-    min-height: 100px;
-  }
-   .contactdiv{
+  .contactdiv{
     height: 530px;
   }
 }
