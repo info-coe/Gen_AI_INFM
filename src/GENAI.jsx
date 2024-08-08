@@ -1,8 +1,4 @@
 import React from "react";
-import featureImage1 from "./Images/featuresImage1.jpg";
-import featureImage2 from "./Images/featuresImage2.jpg";
-import featureImage3 from "./Images/featuresImage3.jpg";
-import featureImage4 from "./Images/featuresImage4.jpg";
 import featureImage5 from "./Images/featuresImage5.png";
 import Contactus from "./Contactus";
 
@@ -71,51 +67,54 @@ export default function GENAI() {
         </p>
         <div className="mt-4">
           <h3>Our Services</h3>
-          <section className="ServicesContainer">
+          <section className="ServicesContainer mt-4">
             {servicesData.map((item, index) => (
-                <div className="card" key={index}>
-                  <div className="content">
-                    <h3>{item.heading}</h3>
-                    <p>{item.content}</p>
-                  </div>
+              <div className="card" key={index}>
+                <div className="content">
+                  <h3>{item.heading}</h3>
+                  <p>{item.content}</p>
                 </div>
+              </div>
             ))}
           </section>
         </div>
         <div className="AIsolutionImg shadow p-4 rounded d-md-flex">
-          <div className="col-md-5">
-            <img src={featureImage5} alt="whychooseus" width="90%"></img>
+          <div className="col-md-5 text-center">
+            <img src={featureImage5} alt="whychooseus" width="80%"></img>
           </div>
           <div className="col-md-7 d-md-flex justify-content-center align-items-center">
             <div>
-            <h2>Why Choose Infomerica as Your AI Solution Partner?</h2>
-            <p>
-              Infomerica is your ideal AI solution partner, offering expert
-              professionals with deep expertise in machine learning, natural
-              language processing, and computer vision. We prioritize security,
-              follow industry-leading practices, and have a proven track record
-              of successful AI implementations across various domains. Our
-              end-to-end development services ensure a seamless experience from
-              consultation to integration, and we adhere to ethical AI
-              principles to respect user privacy, promote fairness, and prevent
-              biases.
-            </p>
+              <h2>Why Choose Infomerica as Your AI Solution Partner?</h2>
+              <p>
+                Infomerica is your ideal AI solution partner, offering expert
+                professionals with deep expertise in machine learning, natural
+                language processing, and computer vision. We prioritize
+                security, follow industry-leading practices, and have a proven
+                track record of successful AI implementations across various
+                domains. Our end-to-end development services ensure a seamless
+                experience from consultation to integration, and we adhere to
+                ethical AI principles to respect user privacy, promote fairness,
+                and prevent biases.
+              </p>
             </div>
           </div>
         </div>
         <div className="mt-4">
           <h3>Features</h3>
-          <div className="d-md-flex">
+
+          <div className="features-container">
             {featuresData.map((item, index) => (
-              <div key={index} className="border p-3 m-2">
-                <h5>{item.heading}</h5>
-                <p>{item.content}</p>
+              <div key={index} className="feature-card">
+                <div className="feature-content">
+                  <h5>{item.heading}</h5>
+                  <p>{item.content}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <Contactus/>
+      <Contactus />
     </div>
   );
 }
