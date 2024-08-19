@@ -108,28 +108,40 @@ export default function GENAI() {
         <div className="mt-4">
           <h3>Our Products</h3>
           <div className="d-md-flex justify-content-evenly gap-5 mt-4">
-            <Link
-              to="/infoscan"
-              className="text-decoration-none text-dark fs-5"
-            >
-              <div className="shadow">
-                <h4 className="text-center pt-4">Info Scan</h4>
-                <div className="text-center">
-                  <img src={SCAN3} alt="infoscan" width="75%" />
-                </div>
+            <div className="shadow">
+              <h4 className="text-center pt-4">Info Scan</h4>
+              <div className="text-center">
+                <img src={SCAN3} alt="infoscan" width="75%" />
               </div>
-            </Link>
-            <Link
-              to="/infoaiaccelerator"
-              className="text-decoration-none text-dark fs-5"
-            >
-              <div className="shadow">
-                <h4 className="text-center pt-4">Info AI Accelerator</h4>
-                <div className="text-center">
-                  <img src={AI1} alt="infoaiaccelerator" width="54%" />
-                </div>
+              <div className="text-end">
+                <Link
+                  to="/infoscan"
+                  className="text-decoration-none text-dark btn btn-primary m-2"
+                  target="blank"
+                >
+                  <b>
+                    Learn More <i className="bi bi-arrow-right"></i>
+                  </b>
+                </Link>
               </div>
-            </Link>
+            </div>
+            <div className="shadow">
+              <h4 className="text-center pt-4">Info AI Accelerator</h4>
+              <div className="text-center">
+                <img src={AI1} alt="infoaiaccelerator" width="54%" />
+              </div>
+              <div className="text-end">
+                <Link
+                  to="/infoaiaccelerator"
+                  className="text-decoration-none text-dark btn btn-primary m-2"
+                  target="blank"
+                >
+                  <b>
+                    Learn More <i className="bi bi-arrow-right"></i>
+                  </b>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
         <div className="mt-4">
