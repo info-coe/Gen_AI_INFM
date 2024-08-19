@@ -1,6 +1,11 @@
 import React from "react";
 import featureImage5 from "./Images/featuresImage5.png";
 import Contactus from "./Contactus";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import { Link } from "react-router-dom";
+import AI1 from "./Images/AI1.jpg";
+import SCAN3 from "./Images/scan3.jpg";
 
 export default function GENAI() {
   const featuresData = [
@@ -46,6 +51,7 @@ export default function GENAI() {
 
   return (
     <div>
+      <Navbar />
       <div className="awsmain">
         <img
           src="https://www.infomericainc.com/Content/images/services-banner.jpg"
@@ -100,7 +106,34 @@ export default function GENAI() {
           </div>
         </div>
         <div className="mt-4">
-          <h3>Features</h3>
+          <h3>Our Products</h3>
+          <div className="d-md-flex justify-content-evenly gap-5 mt-4">
+            <Link
+              to="/infoscan"
+              className="text-decoration-none text-dark fs-5"
+            >
+              <div className="shadow">
+                <h4 className="text-center pt-4">Info Scan</h4>
+                <div className="text-center">
+                  <img src={SCAN3} alt="infoscan" width="75%" />
+                </div>
+              </div>
+            </Link>
+            <Link
+              to="/infoaiaccelerator"
+              className="text-decoration-none text-dark fs-5"
+            >
+              <div className="shadow">
+                <h4 className="text-center pt-4">Info AI Accelerator</h4>
+                <div className="text-center">
+                  <img src={AI1} alt="infoaiaccelerator" width="54%" />
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+        <div className="mt-4">
+          <h3>Our Expertise</h3>
 
           <div className="features-container">
             {featuresData.map((item, index) => (
@@ -115,6 +148,7 @@ export default function GENAI() {
         </div>
       </div>
       <Contactus />
+      <Footer />
     </div>
   );
 }
