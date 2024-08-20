@@ -6,6 +6,7 @@ import info from "./Images/info-scan.jpg";
 import contactImage from "./Images/contactus2.jpeg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import RegisterModal from "./RegisterModal";
 
 export default function InfoScan() {
   const contactRef = useRef(null);
@@ -75,6 +76,18 @@ export default function InfoScan() {
     }
     captchaElement.innerHTML = uniquechar;
     setCaptcha(uniquechar);
+  };
+
+  const [showModal, setShowModal] = useState(false);
+
+  // Function to handle the opening of the modal
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
+  // Function to handle the closing of the modal
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   const infoScanFeatures = [
@@ -201,7 +214,7 @@ export default function InfoScan() {
                 key={index}
                 className="grid-item shadow m-2 p-3"
                 style={{ cursor: "pointer" }}
-                onClick={scrollToContact}
+                onClick={handleOpenModal}
               >
                 <div className="" style={{ height: "54%" }}>
                   <img src={item.image} alt="Services" width="70%" />
@@ -334,6 +347,9 @@ export default function InfoScan() {
           </div>
         </div>
       </div>
+      {showModal && (
+        <RegisterModal showmodal={showModal} onClose={handleCloseModal} />
+      )}
       <Footer />
     </>
   );

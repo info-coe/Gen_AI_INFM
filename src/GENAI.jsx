@@ -113,11 +113,18 @@ export default function GENAI() {
               <div className="text-center">
                 <img src={SCAN3} alt="infoscan" width="75%" />
               </div>
-              <div className="text-end">
+              <p className="pe-3 ps-3">
+                Info Scan is your go-to AI-powered web assessment tool designed
+                to secure your domain and optimize your website’s performance.
+                By combining advanced security scanning with insightful SEO
+                analysis, Info Scan helps you protect your online presence and
+                enhance your search engine rankings effortlessly
+              </p>
+              <div className="text-end pb-3 pe-3">
                 <Link
                   to="/infoscan"
-                  className="text-decoration-none text-dark btn btn-primary m-2"
-                  target="blank"
+                  className="text-decoration-none text-dark btn btn-dark text-white m-2"
+                  // target="_blank"
                 >
                   <b>
                     Learn More <i className="bi bi-arrow-right"></i>
@@ -130,11 +137,18 @@ export default function GENAI() {
               <div className="text-center">
                 <img src={AI1} alt="infoaiaccelerator" width="54%" />
               </div>
-              <div className="text-end">
+              <p className="pe-3 ps-3">
+                Info AI Accelerator revolutionizes the way you train and test
+                Large Language Models (LLMs) by simplifying complex processes
+                and optimizing resource usage. With its user-friendly interface
+                and advanced technology, this platform empowers you to focus on
+                innovation while ensuring efficient model development.
+              </p>
+              <div className="text-end pb-3 pe-3">
                 <Link
                   to="/infoaiaccelerator"
-                  className="text-decoration-none text-dark btn btn-primary m-2"
-                  target="blank"
+                  className="text-decoration-none text-dark btn btn-dark text-white m-2"
+                  // target="_blank"
                 >
                   <b>
                     Learn More <i className="bi bi-arrow-right"></i>
