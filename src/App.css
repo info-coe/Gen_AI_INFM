@@ -504,6 +504,13 @@
   transition: all 0.5s ease-in;
 }
 
+.zoomAnimation {
+  transition: transform 0.2s;
+}
+.zoomAnimation:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 575.98px) {
   .ourcapabilities-grid,
   .ourserviceportfolio-grid {

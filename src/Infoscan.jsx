@@ -7,6 +7,7 @@ import contactImage from "./Images/contactus2.jpeg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import RegisterModal from "./RegisterModal";
+import { Link } from "react-router-dom";
 
 export default function InfoScan() {
   const contactRef = useRef(null);
@@ -212,15 +213,17 @@ export default function InfoScan() {
             {infoScanServices.map((item, index) => (
               <div
                 key={index}
-                className="grid-item shadow m-2 p-3"
+                className="grid-item shadow m-2 p-3 zoomAnimation"
                 style={{ cursor: "pointer" }}
                 onClick={handleOpenModal}
               >
+                <Link to="#" className="text-decoration-none text-dark">
                 <div className="" style={{ height: "54%" }}>
                   <img src={item.image} alt="Services" width="70%" />
                 </div>
                 <h4 style={{ height: "17%" }}>{item.title}</h4>
                 <p>{item.content}</p>
+                </Link>
               </div>
             ))}
           </div>
